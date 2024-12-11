@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Quote Generator</title>
+</head>
+<body>
+  <h1>Dynamic Quote Generator</h1>
+
+  <div id="quoteDisplay"></div>
+  <button id="newQuote">Show New Quote</button> 
+  <br><br>
+
+  <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
+  <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
+  <button id="addQuote">Add Quote</button>
+
+  <div id="createQuoteForm"></div>
+  <button id="exportBtn">Export Quotes</button>
+  <input type="file" id="importFile" accept=".json" />
+  
+  <br><br>
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+  </select>
+
+  <!-- Notification System -->
+  <div id="notification" class="notification" style="display: none;">
+    Data has been updated from the server!
+  </div>
+
+  <!-- Conflict Resolution Modal -->
+  <div id="conflictModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h3>Conflict Detected!</h3>
+      <p id="conflictText"></p>
+      <button id="keepLocal">Keep Local Version</button>
+      <button id="keepServer">Keep Server Version</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
